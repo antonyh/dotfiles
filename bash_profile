@@ -7,3 +7,5 @@ export PATH=${PATH}:${M2_HOME}/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_31-b04-415.jdk/Contents/Home
 
 source ~/.bashrc
+
+alias crx-mvn="mvn clean install crx:install"
