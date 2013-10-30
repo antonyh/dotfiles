@@ -1,4 +1,9 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+export PATH=${PATH}:/Library/PostgreSQL/9.0/bin
+#export REBEL_HOME=~/bin/jrebel
+
 export RUBYOPT=rubygems
 export PATH=$PATH:/users/antonyh/bin
 
