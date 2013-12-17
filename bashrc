@@ -61,13 +61,13 @@ bash_prompt() {
 	local BGC='\[\033[46m\]'
 	local BGW='\[\033[47m\]'
 															    
-	local UC=$C                 # user's color
-        [ $UID -eq "0" ] && UC=$R   # root's color
+	local UC=$W                 # user's color
+        [ $UID -eq "0" ] && UC=$EMR   # root's color
 
 	#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 	#PS1="${EMK}[${UC}\u${EMR}@${UC}\h ${EMB}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}" 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
-	PS1="${W}[\t${W}] ${Y}[${EMB}\${NEW_PWD}${R}\$(parse_git_branch)${Y}]${W} \u\\$ ${NONE}"
+	PS1="\t ${B}\${NEW_PWD}${R}\$(parse_git_branch) ${UC}\u\\$ ${NONE}"
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 } 
 #	
