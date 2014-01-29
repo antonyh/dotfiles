@@ -25,3 +25,11 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 #source ~/.bashrc
 
 alias crx-mvn="mvn clean install crx:install"
+
+
+#keychain
+
+eval `ssh-agent`
+keychain
+ssh-add ~/.ssh/keys/*
+
