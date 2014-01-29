@@ -86,7 +86,7 @@ bash_prompt() {
 	#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 	#PS1="${EMK}[${UC}\u${EMR}@${UC}\h ${EMB}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}" 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
-	PS1="${W}[\t${W}] ${Y}[${EMB}\${NEW_PWD}${R}\$(parse_git_branch)${Y}]${W} \u\\$ ${NONE}"
+	PS1="${EMW}\t ${EMB}\${NEW_PWD}${EMR}\$(parse_git_branch)${EMG} \u\\$ ${NONE}"
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 } 
 #	
