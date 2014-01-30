@@ -30,7 +30,7 @@ if [ "$(uname)" != "Darwin" ]; then
 	# keychain setup
 	eval `ssh-agent`
 	keychain
-	ssh-add ~/.ssh/keys/*
+	ssh-add ~/.ssh/keys/id*
 
 fi
 

@@ -87,9 +87,9 @@ bash_prompt() {
 	#PS1="${EMK}[${UC}\u${EMR}@${UC}\h ${EMB}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}" 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 
-	PS1="\t ${B}\${NEW_PWD}${R}\$(parse_git_branch) ${UC}\u\\$ ${NONE}"
+	#PS1="\t ${B}\${NEW_PWD}${R}\$(parse_git_branch) ${UC}\u\\$ ${NONE}"
 
-	#PS1="${EMW}\t ${EMB}\${NEW_PWD}${EMR}\$(parse_git_branch)${EMG} \u\\$ ${NONE}"
+	PS1="${EMW}\t ${EMB}\${NEW_PWD}${EMR}\$(parse_git_branch)${EMG} \u\\$ ${NONE}"
 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 } 
