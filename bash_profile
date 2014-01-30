@@ -30,8 +30,7 @@ if [ "$(uname)" != "Darwin" ]; then
 	# keychain setup
 	eval `ssh-agent`
 	keychain
-	ssh-add ~/.ssh/keys/id*
-
+	ssh-add ~/.ssh/keys/id*[!p][!u][!b]
 fi
 
 export CLICOLOR=1
@@ -39,5 +38,5 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 #source ~/.bashrc
 
 alias crx-mvn="mvn clean install crx:install"
-
+alias ll="ls -plah"
 
