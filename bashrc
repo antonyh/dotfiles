@@ -1,3 +1,22 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+
+# Put your fun stuff here.
+
 ##################################################
 # Fancy PWD display function
 ##################################################
@@ -67,7 +86,11 @@ bash_prompt() {
 	#PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 	#PS1="${EMK}[${UC}\u${EMR}@${UC}\h ${EMB}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}" 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
+
 	PS1="\t ${B}\${NEW_PWD}${R}\$(parse_git_branch) ${UC}\u\\$ ${NONE}"
+
+	#PS1="${EMW}\t ${EMB}\${NEW_PWD}${EMR}\$(parse_git_branch)${EMG} \u\\$ ${NONE}"
+
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 } 
 #	
