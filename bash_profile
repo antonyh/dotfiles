@@ -22,6 +22,8 @@ if [ "$(uname)" == "Darwin" ]; then
 	export PATH=${PATH}:${M2_HOME}/bin
 	#export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_31-b04-415.jdk/Contents/Home
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+	export CURL_CA_BUNDLE=/usr/share/curl/ca-bundle.crt
+
 fi
 
 #LINUX SPECIFIC SETTINGS
