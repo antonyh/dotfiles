@@ -89,7 +89,7 @@ bash_prompt() {
 
 	#PS1="\t ${B}\${NEW_PWD}${R}\$(parse_git_branch) ${UC}\u\\$ ${NONE}"
 
-	PS1="${EMW}\t ${EMB}\${NEW_PWD}${EMR}\$(parse_git_branch)${EMG} \u\\$ ${NONE}"
+	PS1="${W}\t ${C}\${NEW_PWD}${R}\$(parse_git_branch)${G} \u\\$ ${NONE}"
 
 	#PS1="${W}[\t${W}] ${Y}[${R}\u${R}@${R}\h $(parse_git_branch) ${EMB}\${NEW_PWD}${Y}]${W}\\$ ${NONE}"
 } 
