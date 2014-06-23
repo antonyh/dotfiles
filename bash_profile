@@ -24,6 +24,7 @@ if [ "$(uname)" == "Darwin" ]; then
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 	export CURL_CA_BUNDLE=/usr/share/curl/ca-bundle.crt
 
+	ulimit -n 8196
 fi
 
 #LINUX SPECIFIC SETTINGS
