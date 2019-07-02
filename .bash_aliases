@@ -7,7 +7,7 @@ if [ "$(uname)" != "Darwin" ]; then
 	# keychain setup
         eval `ssh-agent`
         keychain
-        ssh-add ~/.ssh/keys/id*[!p][!u][!b]
+        ssh-add ~/.ssh/id*[!p][!u][!b]
 fi
 
 # MAC OSX SETTINGS

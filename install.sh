@@ -1,5 +1,3 @@
 
-ln -sf `pwd`/bashrc ~/.bashrc
-ln -sf `pwd`/bash_profile ~/.bash_profile
-chmod 700 ~/.bashrc
-chmod 700 ~/.bash_profile
+ln -sf `pwd`/.bash_aliases ~/.bash_aliases
+chmod 700 ~/.bash_aliases

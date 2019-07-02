@@ -1,18 +1,16 @@
 Antony's dotfiles
 
-My dotfiles, so I can share them between machines. Mostly Bash config (.bashrc, .bash_profile)
+My dotfiles, so I can share them between machines. Mostly Bash aliases
 
-File: bashrc
-symlinks to ~/.bashrc
-Sets the prompt to time, path, git branch
-Adapted from a dotfile found on the internet (apologies, if I find out where I'll reference it)
-
-File: bash_profile
-symlinks to ~/.bash_profile
-some enviro vars
-setup for ruby rvm, java, maven
+File: bash aliases
+symlinks to ~/.bash_aliases
+- sets up aliases for pbcopy/pbpaste
+- does keychain/ssh-agent stuff (not really an alias) on Linux
 
 File: install.sh
-simple setup that creates the symlinks and sets X bit 
+simple setup that creates the symlinks and sets eXecutable bit
+
+---
+I'm using this on Linux mostly now. 
 
 
