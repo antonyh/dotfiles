@@ -1,5 +1,42 @@
 ;; antonyh/dotfiles/.emacs
- 
+
+;; identity information
+(setq user-full-name "Antony Hutchison"
+      user-mail-address "antonyh@gmail.com") 
+
+;; I keep my secrets... secret.
+(load "~/.emacs.secrets" t)
+
+;; UNICODE settings
+(prefer-coding-system 'utf-8)
+(when (display-graphic-p)
+  (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
+
+;; put backups in a common place instead of polluting my workspace
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+
+;; file management options
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+
+;; history options
+(setq savehist-file "~/.emacs.d/savehist")
+(savehist-mode 1)
+(setq history-length t)
+(setq history-delete-duplicates t)
+(setq savehist-save-minibuffer-history 1)
+(setq savehist-additional-variables
+      '(kill-ring
+        search-ring
+        regexp-search-ring))
+
+;; display options - remove the toolbar - I don't use it
+(tool-bar-mode -1)
+;;(use-package smart-mode-line)
+
 ;;;;;;;;;;;
 ;; MELPA ;;
 ;;;;;;;;;;;
@@ -18,7 +55,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (helm magit))))
+ '(package-selected-packages (quote (smart-mode-line helm-descbinds elfeed helm magit))))
+
+;; I prefer y/n instead of yes/no - less typing
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;;;;;;;;;;
 ;; THEME ;;
@@ -47,13 +87,24 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; TODO word list
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "IN PROGRESS(I)" "|" "DONE(d)")))
+
 ;;;;;;;;;;
 ;; HELM ;;
 ;;;;;;;;;;
 
+;; common bindings for Helm
 (require 'helm-config)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
+
+;; use Helm for help
+;;(use-package helm-descbinds
+;;	     :defer t
+;;	     :bind (("C-h b" . helm-descbinds)
+;;		    ("C-h w" . helm-descbinds)))
 
