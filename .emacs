@@ -89,7 +89,10 @@
 
 ;; TODO word list
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN PROGRESS(I)" "|" "DONE(d)")))
+      '((sequence "TODO(t)" "IN-PROGRESS(i)" "BLOCKED(b)" "|" "DONE(d)")))
+
+(setq org-agenda-files (list "~/git/notes/todo.org"
+                             "~/git/notes/hollandandbarrett.org"))
 
 ;;;;;;;;;;
 ;; HELM ;;
