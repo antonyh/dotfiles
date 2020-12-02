@@ -91,8 +91,8 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "IN-PROGRESS(i)" "BLOCKED(b)" "|" "DONE(d)")))
 
-(setq org-agenda-files (list "~/git/notes/todo.org"
-                             "~/git/notes/hollandandbarrett.org"))
+(setq org-agenda-files (list "~/todo.org"   
+                             ))
 
 ;;;;;;;;;;
 ;; HELM ;;
